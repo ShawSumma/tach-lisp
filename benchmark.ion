@@ -1,0 +1,22 @@
+(use stdio.ion)
+(fn isprime (x)(
+  (set upto (- x 1))
+  (set y 2)
+  (set prime 1)
+  (while (> upto y)(
+    (if (== 0 (% x y))(
+      (set prime 0)
+    ))
+    (set y (+ y 1))
+  ))
+  (out prime)
+))
+(fn bench (to)(
+  (set x 2)
+  (while (< x to)(
+    (if (isprime x) (
+      (printn x)
+    ))
+    (set x (+ x 1))
+  ))
+))

@@ -1,8 +1,4 @@
-(set x (get))
-(put 10)
-(while (- x 58) (
-    (put x)
-    (put 10)
-    (set x (+ x 1))
-  )
-)
+(use benchmark.ion)
+(fn main () (
+  (bench 10000)
+))
